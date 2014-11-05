@@ -6,12 +6,12 @@ module.exports = function(app) {
       {
         "id": 1,
         "name": "Test Feature",
-        "note": "This is a test :)",
+        "description": "This is a test :)",
         "votes": 21
       }, {
         "id": 2,
         "name": "Cool feature",
-        "note": "Another test",
+        "description": "Another test",
         "votes": 2
       }
     ]});
