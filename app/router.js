@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('features', function() { });
-  this.route('feature/create');
+  this.route('features/create');
 });
 
 export default Router;
