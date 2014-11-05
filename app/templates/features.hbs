@@ -2,7 +2,7 @@
 
 <ul>
 {{#each feature in model}}
-  <li>{{feature.name}}</li>
+  <li>{{feature.name}} - {{feature.note}} - <button {{action 'vote'}}>Vote</button></li>
 {{/each}}
 </ul>
 
