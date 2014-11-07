@@ -1,8 +1,6 @@
 # Vote-logic
 
-This README outlines the details of collaborating on this Ember application.
-
-A short introduction of this app could easily go here.
+![](https://travis-ci.org/davidmaitland/vote-logic.svg?branch=master)
 
 ## Prerequisites
 
