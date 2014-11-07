@@ -1,6 +1,6 @@
 # Vote-logic
 
-![](https://travis-ci.org/davidmaitland/vote-logic.svg?branch=master)
+[![Build Status](https://travis-ci.org/davidmaitland/vote-logic.svg?branch=master)](https://travis-ci.org/davidmaitland/vote-logic)
 
 ## Prerequisites
 
