@@ -2,7 +2,7 @@
 
 <ul>
   {{#each item in model}}
-  <li>{{item.name}}</li>
+  <li>{{#link-to 'feature' item}}{{item.name}} ({{item.votes}}){{/link-to}}</li>
   {{/each}}
 </ul>
 
