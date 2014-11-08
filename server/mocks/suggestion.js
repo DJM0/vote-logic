@@ -1,20 +1,20 @@
 module.exports = function(app) {
   var express = require('express');
-  var featuresRouter = express.Router();
-  featuresRouter.get('/', function(req, res) {
-    res.send({"features":[
+  var suggestionsRouter = express.Router();
+  suggestionsRouter.get('/', function(req, res) {
+    res.send({"suggestions":[
       {
         "id": 1,
-        "name": "Test Feature",
+        "suggestion": "Test Feature",
         "description": "This is a test :)",
         "votes": 21
       }, {
         "id": 2,
-        "name": "Cool feature",
+        "suggestion": "Cool feature",
         "description": "Another test",
         "votes": 2
       }
     ]});
   });
-  app.use('/api/features', featuresRouter);
+  app.use('/api/suggestions', suggestionsRouter);
 };

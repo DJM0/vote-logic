@@ -7,9 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
 
-  this.resource('features', function() {
+  this.resource('suggestions', function() {
 
-    this.resource('feature', { path: '/:feature_id' }, function() {
+    this.resource('suggestion', { path: '/:suggestion_id' }, function() {
       
     });
 

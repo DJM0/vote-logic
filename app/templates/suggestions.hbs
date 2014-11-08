@@ -1,0 +1,9 @@
+<h2>Features</h2>
+
+<ul>
+  {{#each item in model}}
+  <li>{{#link-to 'suggestion' item}}{{item.suggestion}} ({{item.votes}}){{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}

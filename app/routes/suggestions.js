@@ -4,7 +4,7 @@ export default Ember.Route.extend({
 
   model: function() {
 
-    return this.store.findAll('feature');
+    return this.store.findAll('suggestion');
 
   }
 
