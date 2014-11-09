@@ -1,7 +1,12 @@
-1: <h3>{{suggestion}} {{votes}}</h3>
+<div class="well">
+  
+  <div class="page-header">
+    <button type="button" class="btn btn-info pull-right" {{action 'vote'}}>Vote</button>
+    <h1>{{model.suggestion}} <small>{{model.votes}} votes</small></h1>
+  </div>
 
-2: <p>{{description}}</p>
+  <p>{{model.description}}</p>
 
-<button {{action 'vote'}}>Vote</button>
+</div>
 
 {{outlet}}

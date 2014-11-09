@@ -2,7 +2,7 @@
 
 <ul>
   {{#each item in model}}
-  <li>{{#link-to 'suggestion' item}}{{item.suggestion}} ({{item.votes}}){{/link-to}}</li>
+  <li>{{#link-to 'suggestion' item}}{{item.suggestion}}{{/link-to}} <span class="label label-info">{{item.votes}}</span></li>
   {{/each}}
 </ul>
 
