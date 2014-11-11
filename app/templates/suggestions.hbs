@@ -1,9 +1,21 @@
-<h2>Features</h2>
+<div class="row">
 
-<ul>
-  {{#each item in model}}
-  <li>{{#link-to 'suggestion' item}}{{item.suggestion}}{{/link-to}} <span class="label label-info">{{item.votes}}</span></li>
-  {{/each}}
-</ul>
+  <div class="col-md-6">
 
-{{outlet}}
+    <h2>Suggestions and Requests</h2>
+
+    <ul>
+      {{#each item in model}}
+      <li>{{#link-to 'suggestion' item}}{{item.suggestion}}{{/link-to}} <span class="label label-info">{{item.votes}}</span></li>
+      {{/each}}
+    </ul>
+
+  </div>
+
+  <div class="col-md-6">
+
+    {{outlet}}
+
+  </div>
+
+</div>
