@@ -4,11 +4,23 @@
 
     <h2>Suggestions and Requests</h2>
 
-    <ul>
-      {{#each item in model}}
-      <li>{{#link-to 'suggestion' item}}{{item.suggestion}}{{/link-to}} <span class="label label-info">{{item.votes}}</span></li>
-      {{/each}}
-    </ul>
+    {{#each item in model}}
+
+      <div class="suggestion-item">
+
+        <div class="vote-box">
+          <p class="vote-text text-center">{{item.votes}}</p>
+          <button type="button" class="btn btn-default btn-sm" {{action 'vote'}}>Vote</button>
+        </div>
+
+        <p class="lead">{{item.suggestion}}</p>
+
+        <p>{{item.description}}</p>
+
+
+      </div>
+
+    {{/each}}
 
   </div>
 
