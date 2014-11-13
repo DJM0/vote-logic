@@ -5,7 +5,16 @@ export default Ember.Controller.extend({
   actions: {
 
     submit: function() {
-      console.log('submit');
+      
+      var suggestion = this.store.createRecord('suggestion', {
+
+        suggestion: this.get('suggestion'),
+        description: this.get('description')
+
+      });
+
+      suggestion.save();
+
     }
 
   }

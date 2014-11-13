@@ -15,7 +15,7 @@ Router.map(function() {
 
   });
 
-  this.route('create');
+  this.route('create', { path: 'suggestions/create' });
 
 });
 
