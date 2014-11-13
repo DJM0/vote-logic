@@ -13,7 +13,8 @@ export default Ember.Controller.extend({
 
       });
 
-      suggestion.save();
+      //suggestion.save();
+      this.transitionTo('suggestion', suggestion.save());
 
     }
 
