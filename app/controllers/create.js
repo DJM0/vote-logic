@@ -9,7 +9,8 @@ export default Ember.Controller.extend({
       var suggestion = this.store.createRecord('suggestion', {
 
         suggestion: this.get('suggestion'),
-        description: this.get('description')
+        description: this.get('description'),
+        authorEmail: this.get('authorEmail')
 
       });
 
