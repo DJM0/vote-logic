@@ -4,6 +4,8 @@
 
     <h2>Suggestions and Requests</h2>
 
+    <hr>
+
     {{#each item in model}}
 
       <div class="suggestion-item">
@@ -13,12 +15,18 @@
           <button type="button" class="btn btn-default btn-sm" {{action 'vote' item}}>Vote</button>
         </div>
 
-        <p class="lead">{{item.suggestion}}</p>
+        <h4>{{item.suggestion}}</h4>
 
         <p>{{item.description}}</p>
 
 
       </div>
+
+    {{else}}
+
+      <p class="lead">Looks like we have no suggestions yet!</p>
+
+      <p>Why don't you {{#link-to 'create'}}suggest something{{/link-to}} for us?</p>
 
     {{/each}}
 
