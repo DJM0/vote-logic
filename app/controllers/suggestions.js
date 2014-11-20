@@ -6,9 +6,16 @@ export default Ember.ArrayController.extend({
 
     vote: function(item) {
 
-      console.log(item.incrementProperty('votes'));
+      var vote = this.store.createRecord('vote', {
+        'suggestion': item.id,
+        'email': 'hello@davidmaitland.me',
+        'votes': 3
+      });
 
-      item.save();
+      vote.save().then(function(vote){
+        item.get('votes').pushObject(vote);
+      });
+
 
     }
 
