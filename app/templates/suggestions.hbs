@@ -9,7 +9,7 @@
       <div class="suggestion-item">
 
         <div class="vote-box">
-          <p class="vote-text text-center">{{item.votes}}</p>
+          <p class="vote-text text-center">{{item.total}}</p>
           <button type="button" class="btn btn-default btn-sm" {{action 'vote' item}}>Vote</button>
         </div>
 
@@ -17,6 +17,11 @@
 
         <p>{{item.description}}</p>
 
+        {{#each item.votes}}
+
+          {{votes}}
+
+        {{/each}}
 
       </div>
 
