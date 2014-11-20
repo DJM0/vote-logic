@@ -30,3 +30,8 @@ html, body {
   font-size: 30px;
   color: #005A7E
 }
+
+.notes {
+  margin-top: 50px;
+  background-color: #eee;
+}

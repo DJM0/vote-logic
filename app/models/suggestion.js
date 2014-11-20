@@ -4,9 +4,8 @@ export default DS.Model.extend({
 
   suggestion: DS.attr('string'),
   description: DS.attr('string'),
-  authorEmail: DS.attr('string'),
-  votes: DS.hasMany('vote'),
-  total: DS.attr('number', {readOnly: true}),
+  email: DS.attr('string'),
+  votes: DS.hasMany('vote', { async: false }),
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('date')
 

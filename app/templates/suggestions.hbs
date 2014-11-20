@@ -19,11 +19,19 @@
 
         <p>{{item.description}}</p>
 
-        {{#each item.votes}}
+        <p class="notes">
 
-          {{votes}}
+          <ul>
+          {{#each item.votes}}
 
-        {{/each}}
+            {{#if comments}}
+            <li>{{votes}} - <small>{{comments}} ({{createdAt}})</small></li>
+            {{/if}}
+
+          {{/each}}
+          </ul>
+
+        </p>
 
       </div>
 
