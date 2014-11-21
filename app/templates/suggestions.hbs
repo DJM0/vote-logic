@@ -24,8 +24,8 @@
           <ul>
           {{#each item.votes}}
 
-            {{#if comments}}
-            <li>{{votes}} - <small>{{comments}} ({{createdAt}})</small></li>
+            {{#if note}}
+            <li><small>{{note}}</small></li>
             {{/if}}
 
           {{/each}}

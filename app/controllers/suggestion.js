@@ -7,7 +7,7 @@ export default Ember.ObjectController.extend({
     vote: function(suggestion) {
 
       var item = this.store.createRecord('vote', {
-        'comments': 'Hello Wolrd',
+        'note': 'Hello Wolrd',
         'votes': 1
       });
 
@@ -17,18 +17,18 @@ export default Ember.ObjectController.extend({
 
     }
 
-  },
+  }
 
-  total: function() {
+  // total: function() {
 
-    var votes = 0;
+  //   var votes = 0;
 
-    this.get('votes').forEach(function(item){
-      votes += item.get('votes');
-    });
+  //   this.get('votes').forEach(function(item){
+  //     votes += item.get('votes');
+  //   });
 
-    return votes;
+  //   return votes;
 
-  }.property('total')
+  // }.property('total')
 
 });

@@ -6,6 +6,7 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   email: DS.attr('string'),
   votes: DS.hasMany('vote', { async: false }),
+  total: DS.attr('number', { readOnly: true }),
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('date')
 
