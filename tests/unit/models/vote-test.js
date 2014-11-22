@@ -3,13 +3,13 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForModel('vote', 'Vote', {
-  // Specify the other units that are required for this test.
-  needs: []
-});
+// moduleForModel('vote', 'Vote', {
+//   // Specify the other units that are required for this test.
+//   needs: []
+// });
 
-test('it exists', function() {
-  var model = this.subject();
-  // var store = this.store();
-  ok(!!model);
-});
+// test('it exists', function() {
+//   var model = this.subject();
+//   // var store = this.store();
+//   ok(!!model);
+// });
