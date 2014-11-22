@@ -13,22 +13,12 @@ export default Ember.ObjectController.extend({
 
       var vote = suggestion.get('votes').pushObject(item);
 
-      vote.save();
+      vote.save().then(function() {
+        suggestion.reload();
+      });
 
     }
 
   }
-
-  // total: function() {
-
-  //   var votes = 0;
-
-  //   this.get('votes').forEach(function(item){
-  //     votes += item.get('votes');
-  //   });
-
-  //   return votes;
-
-  // }.property('total')
 
 });
