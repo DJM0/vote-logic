@@ -11,7 +11,7 @@
       <div class="suggestion-item">
 
         <div class="vote-box">
-          <p class="vote-text text-center">{{item.total}}</p>
+          <p class="vote-text text-center">{{item.votes}}</p>
           <button type="button" class="btn btn-default btn-sm" {{action 'vote' item}}>Vote</button>
         </div>
 
@@ -22,7 +22,7 @@
         <p class="notes">
 
           <ul>
-          {{#each item.votes}}
+          {{#each item.notes}}
 
             {{#if note}}
             <li><small>{{note}}</small></li>
