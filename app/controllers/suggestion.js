@@ -4,20 +4,17 @@ export default Ember.ObjectController.extend({
 
   actions: {
 
-    vote: function() {
+    vote: function(suggestion) {
 
-      // var item = this.store.createRecord('vote', {
-      //   'note': 'Hello Wolrd',
-      //   'votes': 1
-      // });
+      var item = this.store.createRecord('vote', {
+        'votes': 1
+      });
 
-      // var vote = suggestion.get('votes').pushObject(item);
+      var vote = suggestion.get('votes').pushObject(item);
 
-      // vote.save().then(function() {
-      //   suggestion.reload();
-      // });
-
-      //var _this = this;
+      vote.save().then(function() {
+        suggestion.reload();
+      });
 
     }
 
