@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/davidmaitland/vote-logic.svg?branch=master)](https://travis-ci.org/davidmaitland/vote-logic)
 
+![votelogic-suggestions](http://i.imgur.com/biPi44v.png "Vote Logic Suggestions")
+
 Vote Logic is a realtime feature/suggestion voting platform for projects, companies and organisations.
 
 This project is the frontend to the counterpart API project [vote-logic-server](https://github.com/davidmaitland/vote-logic-server).
