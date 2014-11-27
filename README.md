@@ -1,6 +1,12 @@
-# Vote-logic
+# Vote Logic
 
 [![Build Status](https://travis-ci.org/davidmaitland/vote-logic.svg?branch=master)](https://travis-ci.org/davidmaitland/vote-logic)
+
+Vote Logic is a realtime feature/suggestion voting platform for projects, companies and organisations.
+
+This project is the frontend to the counterpart API project [vote-logic-server](https://github.com/davidmaitland/vote-logic-server).
+
+**WARNING:** Vote Logic is currently under heavy development and cannot be used for production.
 
 ## Prerequisites
 
@@ -9,7 +15,7 @@ You will need the following things properly installed on your computer.
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
 
-## Installation
+## Installation for development
 
 * `git clone <repository-url>` this repository
 * change into the new directory
@@ -34,10 +40,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
