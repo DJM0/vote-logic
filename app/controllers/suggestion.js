@@ -16,6 +16,20 @@ export default Ember.ObjectController.extend({
         suggestion.reload();
       });
 
+    },
+
+    comment: function(suggestion) {
+
+      var item = this.store.createRecord('note', {
+        'note': 'test'
+      });
+
+      var note = suggestion.get('notes').pushObject(item);
+
+      note.save().then(function() {
+        suggestion.reload();
+      });
+
     }
 
   }
