@@ -43,18 +43,18 @@
             <div class="input-group">
               <input type="text" placeholder="Leave a comment" class="form-control">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Post</button>
+                <button class="btn btn-default" type="button" {{action 'comment' item}}>Post</button>
               </span>
             </div><!-- /input-group -->
 
             {{#if item.notes}}
+            <p>
             <small>
-              <ul>
                 {{#each item.notes}}
-                <li>{{note}}</li>
+                <p>{{note}}</p>
                 {{/each}}
-              </ul>
             </small>
+            </p>
             {{/if}}
 
           </div>
