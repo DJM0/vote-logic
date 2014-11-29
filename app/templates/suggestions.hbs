@@ -12,60 +12,54 @@
 
         <div class="row">
 
-          <div class="col-md-2">
+          <div class="col-sm-2 text-center">
+
+            {{#if item.total}}
+              <h2>{{item.total}}</h2>
+            {{else}}
+              <h2 class="text-muted">0</h2>
+            {{/if}}
+
+            <button type="button" class="btn btn-info" {{action 'vote' item}}>Vote</button>
             
           </div>
 
-          <div class="col-md-10">
+          <div class="col-sm-10">
 
             <h3>{{#link-to 'suggestion' item}}{{item.suggestion}}{{/link-to}} <small>Created {{nice-date item.createdAt}}</small></h3>
 
+            <p class="tags">
+              <span class="label label-info">New</span>
+              <span class="label label-success">Accepted</span>
+              {{!--  <span class="label label-warning">Discussion</span>
+              <span class="label label-primary">In Progress</span>
+              <span class="label label-danger">Rejected</span> --}}
+            </p>
+
             <p>{{item.description}}</p>
 
-            <span class="label label-info">New</span>
-            <span class="label label-success">Accepted</span>
-            <span class="label label-warning">Discussion</span>
-            <span class="label label-primary">In Progress</span>
-            <span class="label label-danger">Rejected</span>
+            <br /> 
+
+            <div class="input-group">
+              <input type="text" placeholder="Leave a comment" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Post</button>
+              </span>
+            </div><!-- /input-group -->
+
+            {{#if item.notes}}
+            <small>
+              <ul>
+                {{#each item.notes}}
+                <li>{{note}}</li>
+                {{/each}}
+              </ul>
+            </small>
+            {{/if}}
 
           </div>
 
         </div>
-
-        Notest
-
-      </div>
-
-    {{/each}}
-
-    <br /><br /><br />
-
-    {{#each item in model itemController="suggestion"}}
-
-      <div class="suggestion-item">
-
-        <div class="vote-box">
-          <p class="vote-text text-center">{{item.total}}</p>
-          <button type="button" class="btn btn-default btn-sm" {{action 'vote' item}}>Vote</button>
-        </div>
-
-        <h4>{{item.suggestion}}</h4>
-
-        <p>{{item.description}}</p>
-
-        <p class="notes">
-
-          <ul>
-          {{#each item.notes}}
-
-            {{#if note}}
-            <li><small>{{note}}</small></li>
-            {{/if}}
-
-          {{/each}}
-          </ul>
-
-        </p>
 
       </div>
 
