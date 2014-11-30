@@ -21,16 +21,15 @@ export default Ember.ObjectController.extend({
 
     },
 
-    comment: function(suggestion) {
+    comment: function() {
 
-      var item = this.store.createRecord('note', {
-        'note': 'test'
+      var note = this.store.createRecord('note', {
+        'note': 'Hello World'
       });
 
-      var note = suggestion.get('notes').pushObject(item);
-
-      note.save().then(function() {
-        suggestion.reload();
+      this.get('notes').then(function(notes) {
+        notes.pushObject(note);
+        note.save();
       });
 
     }
