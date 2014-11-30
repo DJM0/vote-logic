@@ -9,10 +9,10 @@ Router.map(function() {
 
   this.resource('suggestions', function() {
 
-    this.resource('suggestion', { path: '/:suggestion_id' }, function() {
-      
-    });
+  });
 
+  this.resource('suggestion', { path: 'suggestions/:suggestion_id' }, function() {
+  
   });
 
   this.route('create', { path: 'suggestions/create' });
