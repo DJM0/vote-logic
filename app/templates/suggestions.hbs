@@ -1,10 +1,10 @@
 <div class="row">
 
+  <h2>Suggestions and Requests</h2>
+
+  <hr>
+
   <div class="col-md-8">
-
-    <h2>Suggestions and Requests</h2>
-
-    <hr>
 
     {{#each item in model itemController="suggestion"}}
 
@@ -14,13 +14,19 @@
 
           <div class="col-sm-2 text-center">
 
+            <div class="panel panel-default">
+              <div class="panel-body">
+
             {{#if item.total}}
-              <h2>{{item.total}}</h2>
+              <div class="vote-count">{{item.total}}</div>
             {{else}}
-              <h2 class="text-muted">0</h2>
+              <div class="vote-count text-muted">0</div>
             {{/if}}
 
             <button type="button" class="btn btn-info" {{action 'vote' item}}>Vote</button>
+
+              </div>
+            </div>
             
           </div>
 
@@ -37,25 +43,6 @@
             </p>
 
             <p>{{item.description}}</p>
-
-            <br /> 
-
-            <div class="input-group">
-              <input type="text" placeholder="Leave a comment" class="form-control">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button" {{action 'comment' item}}>Post</button>
-              </span>
-            </div><!-- /input-group -->
-
-            {{#if item.notes}}
-            <p>
-            <small>
-                {{#each item.notes}}
-                <p>{{note}}</p>
-                {{/each}}
-            </small>
-            </p>
-            {{/if}}
 
           </div>
 
@@ -75,7 +62,11 @@
 
   <div class="col-md-4">
 
-    {{outlet}}
+    <ul>
+      {{#each item in model itemController="suggestion"}}
+      <li>{{#link-to 'suggestion' item}}{{item.suggestion}}{{/link-to}} - {{item.total}}</li>
+      {{/each}}
+    </ul>
 
   </div>
 

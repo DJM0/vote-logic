@@ -6,32 +6,29 @@ html, body {
   margin-top: 60px;
 }
 
+.btn-info {
+  background-color: #73ACBD;
+  border-color: #3B97B3;
+}
+
+.btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
+  background-color: #3AB0D3;
+  border-color: #3B97B3;
+}
+
 .suggestion-item {
-  margin: 10px 0px 0px 0px;
-  padding: 10px 10px 35px 10px;
-  border-style: solid none solid none;
+  margin: 30px 0px 0px 0px;
+  padding: 0px 0px 30px 0px;
+  border-style: none none solid none;
   border-width: 1px;
   border-color: #eee;
 }
 
-.vote-box {
-  margin: 0px 10px 0px 0px;
-  padding: 10px 15px 5px 15px;
-  width: 80px;
-  height: 80px;
-  border-style: solid solid solid solid;
-  border-width: 1px;
-  border-color: #eee;
-  float: left;
+.suggestion-item a {
+  color: #095584;
 }
 
-.vote-text {
-  font-weight: bold;
-  font-size: 30px;
-  color: #005A7E
-}
-
-.notes {
-  margin-top: 50px;
-  background-color: #eee;
+.vote-count {
+  font-size: 27px;
+  padding-bottom: 10px;
 }
