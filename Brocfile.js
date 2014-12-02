@@ -18,8 +18,11 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 // Bootstrap
-
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+
+// Pace
+app.import('bower_components/pace/pace.js');
+app.import('bower_components/pace/themes/blue/pace-theme-minimal.css');
 
 module.exports = app.toTree();
