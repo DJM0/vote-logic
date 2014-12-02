@@ -16,36 +16,56 @@
 
     <div class="col-sm-10">
 
-      <div class="panel panel-default">
-        <div class="panel-body">
+      <h3>{{suggestion}} <small>Created {{nice-date createdAt}}</small></h3>
 
-          <h3>{{suggestion}} <small>Created {{nice-date createdAt}}</small></h3>
+      <p class="tags">
+        <span class="label label-info">New</span>
+        <span class="label label-success">Accepted</span>
+        {{!--  <span class="label label-warning">Discussion</span>
+        <span class="label label-primary">In Progress</span>
+        <span class="label label-danger">Rejected</span> --}}
+      </p>
 
-          <p class="tags">
-            <span class="label label-info">New</span>
-            <span class="label label-success">Accepted</span>
-            {{!--  <span class="label label-warning">Discussion</span>
-            <span class="label label-primary">In Progress</span>
-            <span class="label label-danger">Rejected</span> --}}
-          </p>
+      <p>{{description}}</p>
 
-          <p>{{description}}</p>
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-sm-6">
+
+            <div class="panel panel-default notes">
+              <div class="panel-body">
+
+                {{#each notes}}
+                  <div class="note">- {{note}} <span class="text-muted">{{nice-date createdAt}}</span></div>
+                {{/each}}
+
+                <div class="input-group add-note">
+                  {{input class="form-control" placeholder="Leave a comment" value=note}}
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" {{action 'comment' this}}>Post</button>
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-sm-6">
+
+            <div class="panel panel-default notes">
+              <div class="panel-body">
+
+              </div>
+            </div>
+
+          </div>
 
         </div>
+
       </div>
-
-      <div class="input-group">
-        <input type="text" placeholder="Leave a comment" class="form-control">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button" {{action 'comment' this}}>Post</button>
-        </span>
-      </div><!-- /input-group -->
-
-      {{#each notes}}
-        <p>{{note}}</p>
-      {{else}}
-        no notes
-      {{/each}}
 
     </div>
 

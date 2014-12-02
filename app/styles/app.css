@@ -6,7 +6,7 @@ html, body {
   margin-top: 60px;
 }
 
-.btn-info {
+/*.btn-info {
   background-color: #73ACBD;
   border-color: #3B97B3;
 }
@@ -14,7 +14,7 @@ html, body {
 .btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
   background-color: #3AB0D3;
   border-color: #3B97B3;
-}
+}*/
 
 .suggestion-item {
   margin: 30px 0px 0px 0px;
@@ -25,10 +25,24 @@ html, body {
 }
 
 .suggestion-item a {
-  color: #095584;
+  color: #2E4D61;
 }
 
 .vote-count {
   font-size: 27px;
   padding-bottom: 10px;
+}
+
+.notes {
+  margin-top: 30px;
+}
+
+.note {
+  font-size: 11px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+}
+
+.add-note {
+  margin-top: 15px;
 }
