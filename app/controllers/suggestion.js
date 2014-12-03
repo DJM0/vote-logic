@@ -12,6 +12,9 @@ export default Ember.ObjectController.extend({
         'votes': 1
       });
 
+      var count = this.get('total') + 1;
+      suggestion.set('total', count);
+
       this.get('votes').then(function(votes) {
         votes.pushObject(vote);
         vote.save().then(function(){
