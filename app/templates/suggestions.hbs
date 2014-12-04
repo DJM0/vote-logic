@@ -6,7 +6,7 @@
 
   <div class="col-md-8">
 
-    {{#each item in model itemController="suggestion"}}
+    {{#each this itemController="suggestion"}}
 
       <div class="suggestion-item">
 
@@ -17,13 +17,13 @@
             <div class="panel panel-default">
               <div class="panel-body">
 
-            {{#if item.total}}
-              <div class="vote-count">{{item.total}}</div>
+            {{#if total}}
+              <div class="vote-count">{{total}}</div>
             {{else}}
               <div class="vote-count text-muted">0</div>
             {{/if}}
 
-            <button type="button" class="btn btn-info" {{action 'vote' item}}>Vote</button>
+            <button type="button" class="btn btn-info" {{action 'vote' this}}>Vote</button>
 
               </div>
             </div>
@@ -32,7 +32,7 @@
 
           <div class="col-sm-10">
 
-            <h3>{{#link-to 'suggestion' item}}{{item.suggestion}}{{/link-to}} <small>Created {{nice-date item.createdAt}}</small></h3>
+            <h3>{{#link-to 'suggestion' this}}{{suggestion}}{{/link-to}} <small>Created {{nice-date createdAt}}</small></h3>
 
             <p class="tags">
               <span class="label label-info">New</span>
@@ -42,7 +42,7 @@
               <span class="label label-danger">Rejected</span> --}}
             </p>
 
-            <p>{{item.description}}</p>
+            <p>{{description}}</p>
 
           </div>
 
