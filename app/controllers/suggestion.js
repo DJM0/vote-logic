@@ -39,9 +39,10 @@ export default Ember.ObjectController.extend({
 
     remove: function() {
 
-      this.get('model').deleteRecord();
-      this.get('model').save().done(function() {
-        this.transitionTo('suggestions');
+      var parent = this;
+
+      this.get('model').destroyRecord().then(function() {
+        parent.transitionToRoute('suggestions');
       });
 
     }
