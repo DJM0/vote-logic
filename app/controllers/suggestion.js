@@ -35,6 +35,15 @@ export default Ember.ObjectController.extend({
         note.save();
       });
 
+    },
+
+    remove: function() {
+
+      this.get('model').deleteRecord();
+      this.get('model').save().done(function() {
+        this.transitionTo('suggestions');
+      });
+
     }
 
   }
