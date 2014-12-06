@@ -26,14 +26,20 @@ export default Ember.ObjectController.extend({
 
     comment: function() {
 
-      var note = this.store.createRecord('note', {
-        'note': this.get('note')
-      });
+      if (this.get('note') !== '') {
 
-      this.get('notes').then(function(notes) {
-        notes.pushObject(note);
-        note.save();
-      });
+        var note = this.store.createRecord('note', {
+          'note': this.get('note')
+        });
+
+        this.set('note', '');
+
+        this.get('notes').then(function(notes) {
+          notes.pushObject(note);
+          note.save();
+        });
+
+      }
 
     },
 

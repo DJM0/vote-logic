@@ -37,12 +37,13 @@
             <div class="panel panel-default notes">
               <div class="panel-body">
 
-                {{#each notes}}
-                  <div class="note">- {{note}} <span class="text-muted">{{nice-date createdAt}}</span></div>
+                {{#each this in notes}}
+                  <div class="note">• {{note}} <span class="text-muted">{{nice-date createdAt}}</span></div>
+                  {{!-- {{#link-to 'suggestions'}}open{{/link-to}}</div> --}}
                 {{/each}}
 
                 <div class="input-group add-note">
-                  {{input class="form-control" placeholder="Leave a comment" value=note}}
+                  {{input class="form-control" placeholder="Leave a comment" value=note insert-newline="comment"}}
                   <span class="input-group-btn">
                     <button class="btn btn-default" type="button" {{action 'comment' this}}>Post</button>
                   </span>
@@ -61,10 +62,10 @@
               </div>
             </div>
 
-            <div class="panel panel-default notes">
+            <div class="panel panel-default suggestion-admin">
               <div class="panel-body">
 
-                <button type="button" class="btn btn-sm btn-danger" {{action 'remove' this}}>Remove</button>
+                <button type="button" class="btn btn-sm btn-danger" {{action 'remove' this}}>Remove Suggestion</button>
 
               </div>
             </div>
