@@ -37,9 +37,17 @@
             <div class="panel panel-default notes">
               <div class="panel-body">
 
-                {{#each this in notes}}
-                  <div class="note">• {{note}} <span class="text-muted">{{nice-date createdAt}}</span></div>
-                  {{!-- {{#link-to 'suggestions'}}open{{/link-to}}</div> --}}
+                {{#each notes itemController="note"}}
+
+                  {{#if controllers.application.isAdmin}}
+                  <div class="note">&bull; {{note}} <span class="text-muted"> - {{nice-date createdAt}}</span>
+                  <button class="btn btn-link btn-xs" type="button" {{action 'removeNote'}}>Remove</button></div>
+                  {{else}}
+                  <div class="note">&bull; {{note}} <span class="text-muted"> - {{nice-date createdAt}}</span></div>
+                  {{/if}}
+
+                {{else}}
+                  <div class="note"><span class="text-muted">No comments, why don't you leave one?</span></div>
                 {{/each}}
 
                 <div class="input-group add-note">
@@ -62,6 +70,7 @@
               </div>
             </div>
 
+            {{#if controllers.application.isAdmin}}
             <div class="panel panel-default suggestion-admin">
               <div class="panel-body">
 
@@ -69,6 +78,7 @@
 
               </div>
             </div>
+            {{/if}}
 
 
           </div>
