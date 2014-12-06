@@ -1,6 +1,6 @@
 # Vote Logic
 
-[![Build Status](https://travis-ci.org/davidmaitland/vote-logic.svg?branch=master)](https://travis-ci.org/davidmaitland/vote-logic)
+[![Build Status](https://travis-ci.org/davidmaitland/vote-logic.svg?branch=master)](https://travis-ci.org/davidmaitland/vote-logic) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/davidmaitland/vote-logic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ![votelogic-suggestions](http://i.imgur.com/biPi44v.png "Vote Logic Suggestions")
 
