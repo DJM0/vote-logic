@@ -46,3 +46,7 @@ html, body {
 .add-note {
   margin-top: 15px;
 }
+
+.suggestion-admin {
+  background-color: #323232;
+}
