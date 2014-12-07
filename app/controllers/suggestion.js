@@ -28,7 +28,9 @@ export default Ember.ObjectController.extend({
 
     comment: function() {
 
-      if (this.get('note') !== '') {
+      var note = this.get('note');
+
+      if (note != null && note != '') {
 
         var note = this.store.createRecord('note', {
           'note': this.get('note')
