@@ -28,12 +28,12 @@ export default Ember.ObjectController.extend({
 
     comment: function() {
 
-      var note = this.get('note');
+      var comment = this.get('note');
 
-      if (note != null && note != '') {
+      if (comment !== null && comment !== '') {
 
         var note = this.store.createRecord('note', {
-          'note': this.get('note')
+          'note': comment
         });
 
         this.set('note', '');
