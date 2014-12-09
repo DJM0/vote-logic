@@ -1,0 +1,15 @@
+<div class="alert alert-danger" role="alert">
+
+  <strong>Uh oh!</strong> 
+
+  {{#if responseText}}
+    {{responseText}}
+  {{else}}
+    {{statusText}}
+  {{/if}}
+
+</div>
+
+Want to go {{#link-to 'index'}}home{{/link-to}}?
+
+{{outlet}}

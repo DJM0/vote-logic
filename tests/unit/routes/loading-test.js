@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('route:suggestions/error', 'SuggestionsErrorRoute', {
+moduleFor('route:loading', 'LoadingRoute', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
