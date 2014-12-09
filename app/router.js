@@ -17,6 +17,7 @@ Router.map(function() {
 
   this.route('create', { path: 'suggestions/create' });
 
+  this.route('suggestions/error');
 });
 
 export default Router;
