@@ -20,7 +20,7 @@ module.exports = function(environment) {
   };
 
   ENV.contentSecurityPolicy = {
-    'connect-src': "'self' http://127.0.0.1:1337/" // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+    'connect-src': "'self' http://localhost:1337/*"
   }
 
   if (environment === 'development') {
