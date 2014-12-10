@@ -1,0 +1,35 @@
+<div class="row">
+
+  <h2>Tags</h2>
+
+  <hr>
+
+  <div class="col-md-6">
+
+    <ul>
+    {{#each}}
+
+      <li>{{tag}} ({{colour}})</li>
+
+    {{else}}
+
+      <p class="lead">Looks like we have no tags yet!</p>
+
+      {{!-- <p>Why don't you {{#link-to 'admin/tags/create'}}suggest something{{/link-to}} for us?</p> --}}
+
+    {{/each}}
+    </ul>
+
+  </div>
+
+  <div class="col-md-6">
+
+    {{input type="text" class="form-control" placeholder="Tag name" value=tag}}
+
+    {{input type="text" class="form-control" placeholder="Colour" value=colour}}
+
+    <button class="btn btn-default" {{action "submit" this}}>Submit</button>
+
+  </div>
+
+</div>
