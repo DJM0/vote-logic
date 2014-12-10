@@ -7,15 +7,13 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
 
-  this.resource('suggestions', function() {
+  this.resource('suggestions', function() {});
 
-  });
-
-  this.resource('suggestion', { path: 'suggestions/:suggestion_id' }, function() {
-  
-  });
+  this.resource('suggestion', { path: 'suggestions/:suggestion_id' }, function() {});
 
   this.route('create', { path: 'suggestions/create' });
+
+  this.route('admin/tags');
 
 });
 
