@@ -8,6 +8,7 @@ export default DS.Model.extend({
   total: DS.attr('number', { readOnly: true }),
   votes: DS.hasMany('vote', { async: true }),
   notes: DS.hasMany('note', { async: true }),
+  tags: DS.hasMany('tag', { async: true }),
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('date')
 
