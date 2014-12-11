@@ -19,11 +19,9 @@
       <h3>{{suggestion}} <small>Created {{nice-date createdAt}}</small></h3>
 
       <p class="tags">
-        <span class="label label-info">New</span>
-        <span class="label label-success">Accepted</span>
-        {{!--  <span class="label label-warning">Discussion</span>
-        <span class="label label-primary">In Progress</span>
-        <span class="label label-danger">Rejected</span> --}}
+        {{#each tags}}
+        <span class="label label-info">{{tag}}</span>
+        {{/each}}
       </p>
 
       <p>{{description}}</p>
@@ -75,6 +73,13 @@
               <div class="panel-body">
 
                 <button type="button" class="btn btn-sm btn-danger" {{action 'remove' this}}>Remove Suggestion</button>
+
+                <div class="input-group add-note">
+                  {{input class="form-control" placeholder="Add a tag" value=tag insert-newline="tag"}}
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" {{action 'tag' this}}>Add</button>
+                  </span>
+                </div>
 
               </div>
             </div>

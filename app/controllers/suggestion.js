@@ -47,6 +47,22 @@ export default Ember.ObjectController.extend({
 
     },
 
+    tag: function() {
+
+      var suggestion = this.get('model');
+
+      this.store.find('tag', { tag: "New" }).then(function(items) {
+        var tag = items.objectAt(0);
+
+        suggestion.get('tags').then(function(tags) {
+          tags.pushObject(tag);
+          tag.save();
+        });
+
+      });
+
+    },
+
     remove: function() {
 
       var parent = this;
