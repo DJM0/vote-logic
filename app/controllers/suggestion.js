@@ -30,7 +30,7 @@ export default Ember.ObjectController.extend({
 
       var comment = this.get('note');
 
-      if (comment !== null && comment !== '') {
+      if (comment !== undefined && comment !== '') {
 
         var note = this.store.createRecord('note', {
           'note': comment
