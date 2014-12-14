@@ -41,11 +41,9 @@
             <h3>{{#link-to 'suggestion' this}}{{suggestion}}{{/link-to}} <small>Created {{nice-date createdAt}}</small></h3>
 
             <p class="tags">
-              <span class="label label-info">New</span>
-              <span class="label label-success">Accepted</span>
-              {{!--  <span class="label label-warning">Discussion</span>
-              <span class="label label-primary">In Progress</span>
-              <span class="label label-danger">Rejected</span> --}}
+              {{#each tags}}
+              <span class="label label-info">{{tag}}</span>
+              {{/each}}
             </p>
 
             <p>{{description}}</p>
