@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
 
-  host: 'http://127.0.0.1:1337',
+  host: 'http://localhost:1337',
   namespace: 'api',
   coalesceFindRequests: true
 
