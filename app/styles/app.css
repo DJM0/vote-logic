@@ -6,16 +6,6 @@ html, body {
   margin-top: 60px;
 }
 
-/*.btn-info {
-  background-color: #73ACBD;
-  border-color: #3B97B3;
-}
-
-.btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
-  background-color: #3AB0D3;
-  border-color: #3B97B3;
-}*/
-
 .suggestion-item {
   margin: 30px 0px 0px 0px;
   padding: 0px 0px 30px 0px;
@@ -49,4 +39,46 @@ html, body {
 
 .suggestion-admin {
   background-color: #323232;
+}
+
+.vote-circle-box {
+
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  height: 50px;
+  background-color: #CAD0D7;
+  border-radius: 100%;
+
+}
+
+.vote-circle {
+
+  position: relative;
+  width: 10px;
+  height: 10px;
+  top: 20px;
+  left: 20px;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  text-align: center;
+  background-color: #525252;
+  color: white;
+  border-radius: 100%;
+  padding: 0px;
+  overflow: hidden;
+
+}
+
+.vote-circle-active {
+
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  -webkit-transition-duration: 1.2s;
+
 }
