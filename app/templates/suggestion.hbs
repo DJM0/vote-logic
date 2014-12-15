@@ -4,13 +4,15 @@
 
     <div class="col-sm-2 text-center">
 
+      <div class="vote-circle-box">
+        {{vote-circle action="vote"}}
+      </div>
+
       {{#if total}}
         <h2>{{total}}</h2>
       {{else}}
         <h2 class="text-muted">0</h2>
       {{/if}}
-
-      <button type="button" class="btn btn-info" {{action 'vote' this}}>Vote</button>
       
     </div>
 
