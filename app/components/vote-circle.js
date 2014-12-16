@@ -9,11 +9,15 @@ export default Ember.Component.extend({
     var that = this;
 
     Ember.run.later((function() {
+
       if ($(el.target).hasClass('vote-circle-active')) {
-        console.log(that);
+
+        $(el.target).removeClass('vote-circle-active');
         that.sendAction();
+
       }
-    }), 1200);
+
+    }), 1000);
 
   },
 

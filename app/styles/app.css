@@ -46,25 +46,28 @@ html, body {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 50px;
-  height: 50px;
-  background-color: #CAD0D7;
+  width: 57px;
+  height: 57px;
   border-radius: 100%;
+
+  border-width: 3px;
+  border-style: solid;
+  border-color: #494949;
 
 }
 
 .vote-circle {
 
   position: relative;
-  width: 10px;
-  height: 10px;
-  top: 20px;
-  left: 20px;
+  width: 15px;
+  height: 15px;
+  top: 18px;
+  left: 18px;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-property: all;
   -webkit-transition-timing-function: ease-in-out;
   text-align: center;
-  background-color: #525252;
+  background-color: #494949;
   color: white;
   border-radius: 100%;
   padding: 0px;
@@ -76,9 +79,9 @@ html, body {
 
   top: 0px;
   left: 0px;
-  width: 50px;
-  height: 50px;
+  width: 51px;
+  height: 51px;
   background-color: #fff;
-  -webkit-transition-duration: 1.2s;
+  -webkit-transition-duration: 1.0s;
 
 }
