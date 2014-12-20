@@ -4,28 +4,34 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-  mouseOver: function(el){
+  mouseOver: function(el) {
 
     $(el.target).addClass('vote-circle-active');
 
     var that = this;
 
-    Ember.run.later((function() {
+    var timer = Ember.run.later((function() {
 
-      if ($(el.target).hasClass('vote-circle-active')) {
-
-        $(el.target).removeClass('vote-circle-active');
-        that.sendAction();
-
-      }
+      $(el.target).removeClass('vote-circle-active');
+      that.sendAction();
 
     }), 1000);
 
+    this.set('timer', timer);
+
   },
 
-  mouseOut: function(el){
+  mouseOut: function(el) {
 
     $(el.target).removeClass('vote-circle-active');
+
+    Ember.run.cancel(this.get('timer'));
+
+  },
+
+  onClick: function(el){ 
+
+    console.log('CLIKCED');
 
   }
 

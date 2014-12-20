@@ -46,13 +46,14 @@ html, body {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+
   width: 57px;
   height: 57px;
-  border-radius: 100%;
 
+  border-radius: 100%;
   border-width: 3px;
   border-style: solid;
-  border-color: #494949;
+  border-color: rgb(51, 51, 51);
 
 }
 
@@ -66,8 +67,9 @@ html, body {
   -webkit-transition-duration: 0.2s;
   -webkit-transition-property: all;
   -webkit-transition-timing-function: ease-in-out;
+  opacity: 1;
   text-align: center;
-  background-color: #494949;
+  background-color: rgb(51, 51, 51);
   color: white;
   border-radius: 100%;
   padding: 0px;
@@ -81,7 +83,8 @@ html, body {
   left: 0px;
   width: 51px;
   height: 51px;
-  background-color: #fff;
+  background-color: rgb(255, 100, 0);
+  opacity: 0;
   -webkit-transition-duration: 1.0s;
 
 }
