@@ -27,12 +27,6 @@ export default Ember.Component.extend({
 
     Ember.run.cancel(this.get('timer'));
 
-  },
-
-  onClick: function(el){ 
-
-    console.log('CLIKCED');
-
   }
 
 });
