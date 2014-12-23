@@ -14,7 +14,6 @@ export default Ember.Controller.extend({
 
       });
 
-      //suggestion.save();
       this.transitionTo('suggestion', suggestion.save());
 
     }
