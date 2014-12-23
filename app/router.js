@@ -15,6 +15,8 @@ Router.map(function() {
 
   this.route('admin/tags');
 
+  this.route('not-found', { path: '/*path' });
+
 });
 
 export default Router;
