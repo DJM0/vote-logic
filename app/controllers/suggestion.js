@@ -19,9 +19,7 @@ export default Ember.ObjectController.extend({
 
       this.get('votes').then(function(votes) {
         votes.pushObject(vote);
-        vote.save().then(function(){
-          suggestion.reload();
-        });
+        vote.save();
       });
 
     },
