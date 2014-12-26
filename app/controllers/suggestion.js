@@ -8,6 +8,8 @@ export default Ember.ObjectController.extend({
 
     vote: function() {
 
+      this.set('pending', true);
+
       var suggestion = this.get('model');
 
       var vote = this.store.createRecord('vote', {
@@ -17,9 +19,13 @@ export default Ember.ObjectController.extend({
       var count = this.get('total') + 1;
       suggestion.set('total', count);
 
+      var parent = this;
+
       this.get('votes').then(function(votes) {
         votes.pushObject(vote);
-        vote.save();
+        vote.save().then(function(){
+          parent.set('pending', false);
+        });
       });
 
     },
