@@ -21,16 +21,12 @@
           <div class="col-sm-2 text-center">
 
             {{#if total}}
-              <h2>{{total}}</h2>
+            <h2>{{total}}</h2>
             {{else}}
-              <h2 class="text-muted">0</h2>
+            <h2 class="text-muted">0</h2>
             {{/if}}
 
             <button type="button" class="btn btn-info" {{action 'vote' this}} {{bindAttr disabled="pending"}}>Vote</button>
-
-            {{!-- {{#if voted}}
-              <small>Voted!</small>
-            {{/if}} --}}
             
           </div>
 
