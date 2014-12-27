@@ -19,8 +19,20 @@ html, body {
 }
 
 .vote-count {
-  font-size: 27px;
-  padding-bottom: 10px;
+  color: #686671;
+}
+
+.voted {
+
+  -webkit-animation: test 1s;
+  color: rgb(51, 51, 51);
+
+}
+
+@-webkit-keyframes test {
+
+  50% { font-size: 43px; }
+
 }
 
 .notes {
