@@ -25,6 +25,7 @@ export default Ember.ObjectController.extend({
         votes.pushObject(vote);
         vote.save().then(function(){
           parent.set('pending', false);
+          parent.set('voted', true);
         });
       });
 
