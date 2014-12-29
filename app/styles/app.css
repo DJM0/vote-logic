@@ -100,3 +100,15 @@ html, body {
   -webkit-transition-duration: 1.0s;
 
 }
+
+#title-bar {
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #eee;
+  padding-bottom: 10px;
+}
+
+#quick-bar {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
