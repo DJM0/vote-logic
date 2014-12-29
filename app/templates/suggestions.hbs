@@ -4,8 +4,8 @@
     Suggestions and Requests
     <div class="btn-group btn-group-sm pull-right" role="group" aria-label="">
       {{#link-to "create" type="button" class="btn btn-info"}}{{this.length}}{{/link-to}}
-      <button type="button" class="btn btn-default" {{action 'sort' 'createdAt'}}>Newest</button>
-      <button type="button" class="btn btn-default" {{action 'sort' 'total'}}>Popular</button>
+      <button type="button" {{action "sort" "createdAt"}} {{bind-attr class="createdAtSort"}}>Newest</button>
+      <button type="button" {{action "sort" "total"}} {{bind-attr class="totalSort"}}>Popular</button>
     </div>
   </h2>
 
