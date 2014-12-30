@@ -50,7 +50,9 @@
               {{/each}}
             </p>
 
-            <p>{{description}}</p>
+            <p>{{truncate-text description limit=300}}</p>
+
+            <p><small>{{#link-to 'suggestion' this}}{{notes.length}} comments{{/link-to}}</small></p>
 
           </div>
 
