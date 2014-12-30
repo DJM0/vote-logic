@@ -10,6 +10,13 @@ This project is the frontend to the counterpart API project [vote-logic-server](
 
 **WARNING:** Vote Logic is currently under heavy development and cannot be used for production.
 
+## Features
+
+- Truncated suggestion summaries in overview (30/12/14)
+- Suggestion total count (28/12/14)
+- Sort suggestions by popularity or date created (04/12/14)
+- Add notes to suggestions (29/11/14)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
