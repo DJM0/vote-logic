@@ -12,6 +12,8 @@ This project is the frontend to the counterpart API project [vote-logic-server](
 
 ## Features
 
+- Suggestion preview when creating a new suggestion (31/12/14)
+- Markdown support in suggestion description (31/12/14)
 - Truncated suggestion summaries in overview (30/12/14)
 - Suggestion total count (28/12/14)
 - Sort suggestions by popularity or date created (04/12/14)
