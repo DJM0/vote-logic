@@ -13,7 +13,17 @@ Router.map(function() {
 
   this.route('create', { path: 'suggestions/create' });
 
+
+  // Admin routes
+
+  this.route('admin');
+
   this.route('admin/tags');
+  this.route('admin/suggestions');
+  this.route('admin/settings');
+
+
+  // Global routes
 
   this.route('not-found', { path: '/*path' });
 
