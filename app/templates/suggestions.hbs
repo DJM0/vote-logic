@@ -50,7 +50,13 @@
               {{/each}}
             </p>
 
-            <p>{{truncate-text description limit=300}}</p>
+            <p>
+            {{#if summary}}
+              {{summary}}
+            {{else}}
+              No summary available, {{#link-to 'suggestion' this}}click here{{/link-to}} to view suggestion.
+            {{/if}}
+            </p>
 
             <p><small>{{#link-to 'suggestion' this}}{{notes.length}} comments{{/link-to}}</small></p>
 

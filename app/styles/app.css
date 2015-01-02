@@ -113,3 +113,17 @@ html, body {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
+.description h1 { font-size: 24px; }
+
+.description h2 { font-size: 22px; }
+
+.description h3 { font-size: 20px; }
+
+.description h4 { font-size: 18px; }
+
+.description h5 { font-size: 16px; }
+
+.description h6 { font-size: 14px; }
+
+.description blockquote { font-size: 16px; }
