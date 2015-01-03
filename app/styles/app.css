@@ -114,6 +114,10 @@ html, body {
   margin-bottom: 10px;
 }
 
+.description {
+  margin-top: 25px;
+}
+
 .description h1 { font-size: 24px; }
 
 .description h2 { font-size: 22px; }
@@ -127,3 +131,11 @@ html, body {
 .description h6 { font-size: 14px; }
 
 .description blockquote { font-size: 16px; }
+
+@media (min-width: 767px) {
+  
+  .suggestion-vote {
+    position:fixed
+  }
+
+}

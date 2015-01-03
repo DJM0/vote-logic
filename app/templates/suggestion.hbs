@@ -6,13 +6,17 @@
 
       <div class="col-sm-2 text-center">
 
-        {{#if total}}
-          <h2 class="vote-count" {{bind-attr class="voted"}}>{{total}}</h2>
-        {{else}}
-          <h2 class="text-muted">0</h2>
-        {{/if}}
+        <div class="suggestion-vote">
 
-        <button type="button" class="btn btn-info" {{action 'vote' this}} {{bind-attr disabled="pending"}}>Vote</button>
+          {{#if total}}
+            <h2 class="vote-count" {{bind-attr class="voted"}}>{{total}}</h2>
+          {{else}}
+            <h2 class="text-muted">0</h2>
+          {{/if}}
+
+          <button type="button" class="btn btn-info" {{action 'vote' this}} {{bind-attr disabled="pending"}}>Vote</button>
+
+        </div>
         
       </div>
 
